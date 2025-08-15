@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="var">
+        <h2>Var :</h2>
+        <p id="value"></p>
+        <script>
+            var a = 3;
+            var b = 4;
+            var c = a + b;
+
+            document.getElementById("value").innerHTML = "The value of c is : " + c;
+        </script>
+    </div>
+    <div class="const">
+    <h2>Const</h2>
+    <p id="cars"></p>
+    <script>
+        const cars = ["Rubicon, Porche911, CamaroSS, Audir8"];
+        // cars[0] = "BMW M4 Coup";
+        cars.push(" Jaguar F type")
+        document.getElementById("cars").innerHTML = cars;
+    </script>
+    </div>
+</body>
+
+</html>
