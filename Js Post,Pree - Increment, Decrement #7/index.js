@@ -1,3 +1,4 @@
+// Post/Pre Increments Examples..
 //1. 
 let a = 5;
 console.log(a++);  //prints a first - 5 then it becoms 6.
@@ -67,3 +68,40 @@ let value = ++m + m++ + ++m + m++ + m;
 // fourth step - it uses 7, increment will happen in next step. final value = 8.
 // fourth step - here is the final and incremented value of m is = 9.
 console.log(m, value); // prints 9, 37.
+
+//Post/Pre Decrements Examples..
+
+// 1.
+let a1 = 5;
+console.log(a1--); // 5
+console.log(a1); // 4
+
+// 2.
+let b1 = 10;
+console.log(--b1);// 9
+console.log(b1); // 9
+
+// 3.
+let x1 = 8; 
+let y1 = x1-- + --x1;
+// let y1 = 8 + 6;
+console.log(x1, y1); // 6 14
+
+// // 4.
+let p1 = 12;
+let q1 = --p1 + p1-- + --p1;
+// let q1 = 11 + 11 + 9;
+console.log(p1, q1); // 9 31
+
+// 5.
+let m1 = 7; 
+let value1 = m1-- + --m1 + m1-- + --m1 + m1;
+// let value1 = 7 + 5 + 5 + 3 + 3;
+console.log(m1, value1); // 3 23
+
+// Increments and Decrements mixed problem -
+
+let z = 5;
+let result1 = z++ + --z + ++z + z-- + z;
+// result1 = 5 + 5 + 6 + 6 + 5 = 
+console.log(z, result1); // 5 27

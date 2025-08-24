@@ -131,7 +131,7 @@ let amount = 1000;
 let Discount = (amount > 500) ? "Discount" : "No Discount";
 console.log(Discount);
 
-//exm 20 to 23.	
+//exm 20 to 22.	
 // Compound Assignment +=.
 // Compound Assignment -=.
 // Compound Assignment *=.
@@ -151,19 +151,70 @@ console.log(y);
 y /= x; 
 console.log(y);
 
-//exm 24.	
+//exm 23.	
 // Pre-increment vs post increment.
 
+//Pre increment example :
 let d1 =  5;
 let d2 = ++d1;
 console.log(d1)
 console.log(d2)
 
+//Post increment example :
 let d3 = 7;
 let d4 = d3++;
 console.log(d3)
 console.log(d4)
 
-//exm 25.	
+//exm 24.	
 // Pre-Decriment vs post Decriment.
 
+//Post increment example :
+let d5 = 8;
+let d6 = --d5;
+console.log(d5)// 7
+console.log(d6)// 7
+
+//Post decrement example :
+let d7 = 6;
+let d8 = d7--;
+console.log(d7)// 5
+console.log(d8)// 6
+
+//exm 25.	
+//String concatenation with +.
+
+let e1 = "Sidd";
+let e2 = " Is a skilled Software Engineer"
+let e3 = e1 + e2;
+console.log(e3)
+
+//exm 26.
+// 	Check "5" + 2 vs "5" - 2.
+
+let e4 = "5" + 2;
+let e5 = "5" - 2;
+console.log(e4, e5);
+
+//exm 27.	
+// Use typeof operator.
+
+console.log(typeof(e4))
+console.log(typeof(e5))
+
+//exm 28.
+// 	Check null == undefined.
+
+let e6 = (null == undefined);
+console.log(e6)
+
+//exm 29.	
+// Check null === undefined.
+let e7 = (null === undefined);
+console.log(e7)
+
+let e8 = null;
+console.log(typeof(e8))
+
+let e9 = undefined;
+console.log(typeof(e9))
