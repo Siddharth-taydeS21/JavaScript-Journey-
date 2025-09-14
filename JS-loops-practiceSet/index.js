@@ -204,6 +204,16 @@ for (const char of str) {
 let newArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
 
 for (const num of newArr) {
-    console.log(num * 2);
+    // console.log(num * 2);
 }
 
+//24.	Loop to find max number in array.
+let array = [ 30, 10, 5, 20, 15];
+let max = 0;
+
+for (let i = 0; i < array.length; i++) {
+     if (array[i] > max) {
+            max = array[i];
+         }
+        };
+ console.log(max);
