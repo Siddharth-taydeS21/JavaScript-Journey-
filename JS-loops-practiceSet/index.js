@@ -107,11 +107,11 @@ for (let i = 1; i <= 5; i++) {
 
 //14.	For…of: iterate array.
 let sampleArr = [1, 2, 3, 4, 5,
-                 6, 7, 8, 9, 10,
-                 11, 12, 13, 14,
-                 15, 16, 17, 17,
-                  18, 19, 20];
-  
+    6, 7, 8, 9, 10,
+    11, 12, 13, 14,
+    15, 16, 17, 17,
+    18, 19, 20];
+
 for (const num of sampleArr) {
     // console.log(num);
 }
@@ -157,7 +157,7 @@ for (const key in sampleObj) {
 //1.
 for (let i = 0; i < sampleArr.length; i++) {
     // console.log(`value of i is ${sampleArr[i]}`);
-    if(i === 5){
+    if (i === 5) {
         // console.log(`5th iteration detected`);
         break;
     }
@@ -166,7 +166,7 @@ for (let i = 0; i < sampleArr.length; i++) {
 //2.
 for (let i = 1; i < 20; i++) {
     // console.log(i);
-    if(i == 5){
+    if (i == 5) {
         // console.log(`5th iteration detected`);
         break;
     }
@@ -175,7 +175,7 @@ for (let i = 1; i < 20; i++) {
 //18.	Continue statement example.
 for (let i = 1; i < 20; i++) {
     // console.log(i);
-    if(i == 5){
+    if (i == 5) {
         // console.log(`5th iteration detected, from here, loop will continue`);
         continue;
     }
@@ -193,7 +193,7 @@ let str = "efoifwbuvvrfoiwwhuivbyv";
 let vowels = "aeiouAEIOU";
 
 for (const char of str) {
-    if(vowels.includes(char)){
+    if (vowels.includes(char)) {
         // console.log(char);
     }
 }
@@ -207,13 +207,51 @@ for (const num of newArr) {
     // console.log(num * 2);
 }
 
-//24.	Loop to find max number in array.
-let array = [ 30, 10, 5, 20, 15];
+//22.	Loop to find max number in array.
+let array = [30, 10, 5, 20, 15];
 let max = 0;
 
 for (let i = 0; i < array.length; i++) {
-     if (array[i] > max) {
-            max = array[i];
-         }
-        };
- console.log(max);
+    if (array[i] > max) {
+        max = array[i];
+    }
+};
+//  console.log(max);
+
+//23.	Loop to reverse array.
+
+const Arr = [30, 10, 5, 20, 15];
+const reverseArr = [];
+
+const length = Arr.length;
+for (let i = 0; i < length; i++) {
+    reverseArr.push(Arr.pop())
+}
+
+// console.log(reverseArr);
+
+//24.	Loop to count digits in number.
+
+let Numberr = 1000000; // must be let, not const
+let count = 0;
+
+// for (; Numberr > 0; Numberr = Math.floor(Numberr / 10)) {
+//     count++;
+// }
+
+
+while (Numberr > 0){
+    Numberr = Math.floor(Numberr / 10);
+    count++;
+}
+// console.log(count);
+
+//25.	Loop to check prime numbers 1–50.
+
+let nums = [];
+
+for (let i = 2; i <= 50; i++) {
+    nums.push(i)
+}
+// console.log(nums);
+
