@@ -68,7 +68,7 @@ for (let i = 1; i <= rwos; i++) {
 }
 
 //++++++++++++++++++++++++ While loop ++++++++++++++++++++++++
-//10.	While loop: 1–10.
+//9.	While loop: 1–10.
 
 let a1 = 1;
 while (a1 <= 10) {
@@ -76,7 +76,7 @@ while (a1 <= 10) {
     a1++;
 }
 
-//11.	While loop: sum of 1–50.
+//10.	While loop: sum of 1–50.
 
 let a2 = 1;
 let sum1 = 0;
@@ -88,7 +88,7 @@ while (a2 <= 50) {
 // console.log(sum1);
 
 //++++++++++++++++++++++++ Do While loop ++++++++++++++++++++++++
-//12.	Do while loop: print 1–5..
+//11.	Do while loop: print 1–5..
 let i = 1;
 do {
     // console.log(i);
@@ -96,7 +96,7 @@ do {
 
 } while (i <= 5);
 
-//13.	Nested loops: multiplication table 1–5.
+//12.	Nested loops: multiplication table 1–5.
 
 for (let i = 1; i <= 5; i++) {
     //    console.log(`Multipication table of ${i}`);
@@ -105,7 +105,7 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-//14.	For…of: iterate array.
+//13.	For…of: iterate array.
 let sampleArr = [1, 2, 3, 4, 5,
     6, 7, 8, 9, 10,
     11, 12, 13, 14,
@@ -122,7 +122,7 @@ for (let i = 0; i < sampleArr.length; i++) {
     // console.log(sampleArr[i]);
 }
 
-//15.	For…of: iterate string. 
+//14.	For…of: iterate string. 
 let sampleStr = "SIDD SOFTWARE ENGINEER";
 for (const letter of sampleStr) {
     // console.log(letter);
@@ -134,7 +134,7 @@ for (let i = 0; i < sampleStr.length; i++) {
     //    console.log(sampleStr.charAt(i));
 }
 
-//16.	For…in: iterate object.
+//15.	For…in: iterate object.
 
 const sampleObj = {
     firstNmae: "Siddharth",
@@ -153,7 +153,7 @@ for (const key in sampleObj) {
     }
 }
 
-//17.	Continue statement example.
+//16.	Continue statement example.
 //1.
 for (let i = 0; i < sampleArr.length; i++) {
     // console.log(`value of i is ${sampleArr[i]}`);
@@ -172,7 +172,7 @@ for (let i = 1; i < 20; i++) {
     }
 }
 
-//18.	Continue statement example.
+//17.	Continue statement example.
 for (let i = 1; i < 20; i++) {
     // console.log(i);
     if (i == 5) {
@@ -181,14 +181,14 @@ for (let i = 1; i < 20; i++) {
     }
 }
 
-//19.	Infinite loop with break condition.
+//18.	Infinite loop with break condition.
 
 for (let i = 0; i < 10;) {
     // console.log(i);
     break;
 }
 
-//20.	Loop to count vowels in string.
+//19.	Loop to count vowels in string.
 let str = "efoifwbuvvrfoiwwhuivbyv";
 let vowels = "aeiouAEIOU";
 
@@ -199,7 +199,7 @@ for (const char of str) {
 }
 
 
-//21.	Loop through array and double values.
+//20.	Loop through array and double values.
 
 let newArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
 
@@ -207,7 +207,7 @@ for (const num of newArr) {
     // console.log(num * 2);
 }
 
-//22.	Loop to find max number in array.
+//21.	Loop to find max number in array.
 let array = [30, 10, 5, 20, 15];
 let max = 0;
 
@@ -218,7 +218,7 @@ for (let i = 0; i < array.length; i++) {
 };
 //  console.log(max);
 
-//23.	Loop to reverse array.
+//22.	Loop to reverse array.
 
 const Arr = [30, 10, 5, 20, 15];
 const reverseArr = [];
@@ -230,7 +230,7 @@ for (let i = 0; i < length; i++) {
 
 // console.log(reverseArr);
 
-//24.	Loop to count digits in number.
+//23.	Loop to count digits in number.
 
 let Numberr = 1000000; // must be let, not const
 let count = 0;
@@ -240,18 +240,58 @@ let count = 0;
 // }
 
 
-while (Numberr > 0){
+while (Numberr > 0) {
     Numberr = Math.floor(Numberr / 10);
     count++;
 }
 // console.log(count);
 
-//25.	Loop to check prime numbers 1–50.
+//24.	Loop to check prime numbers 1–50.
 
-let nums = [];
 
-for (let i = 2; i <= 50; i++) {
-    nums.push(i)
+let primeNumbers = [];
+
+for (let num = 2; num <= 50; num++) {
+    let isPrime = true;
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        primeNumbers.push(num)
+    }
 }
-// console.log(nums);
 
+// console.log(primeNumbers);
+
+// console.log(2 < 2);
+
+//25.	Loop to print sum of even numbers.
+
+let EvenNums = [];
+
+for (let i = 1; i < 100; i++) {
+    if(i % 2 === 0){
+        EvenNums.push(i)
+    }
+}
+// console.log(EvenNums);
+
+// let sumOfEvens = 0;
+for (const element of EvenNums) {
+    // sumOfEvens += element;
+}
+// console.log(sumOfEvens);
+
+
+//optimal approach by chat gpt - 
+let sumOfEvens = 0;
+for (let i = 0; i < 100; i+=2) {
+   sumOfEvens += i;
+}
+// console.log(sumOfEvens);
+ 
