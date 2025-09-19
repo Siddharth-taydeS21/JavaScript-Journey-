@@ -67,13 +67,13 @@ nums.forEach((num) => {
 })
 
 //4.Convert array of strings to uppercase
-const fruits = ["apple", "banana", "mango"];
-fruits.forEach((fruit) => {
+const fruitsA = ["apple", "banana", "mango"];
+fruitsA.forEach((fruit) => {
     // console.log(fruit.toUpperCase())
 })
 
 //5.Count characters in each string
-fruits.forEach((fruit, index) => {
+fruitsA.forEach((fruit, index) => {
     // console.log(`characters in string ${index + 1}: ${fruit.length}`)
 });
 
@@ -96,14 +96,14 @@ nums.forEach((num, index) => {
 //8.Format array into a sentence 
 let sentence = "";
 
-fruits.forEach((fruit, index) => {
-    if (index === fruits.length - 1) {
+fruitsA.forEach((fruit, index) => {
+    if (index === fruitsA.length - 1) {
         sentence += `and ${fruit}.`
     } else {
         sentence += `${fruit}, `
     }
 })
-console.log("I Like " + sentence);
+// console.log("I Like " + sentence);
 
 //9.Create a new array (using push inside forEach)
 
@@ -122,6 +122,85 @@ const users = [
 ];
 
 users.forEach((person) => {
-    person.age >= 20 && person.age <= 29 ? console.log(`${person.name} is young.`) : 
-    person.age >= 30 && person.age <= 50  ? console.log(`${person.name} is an adult.`) : console.log(`${person.name} is Old now.`);
+    // person.age >= 20 && person.age <= 29 ? console.log(`${person.name} is young.`) : 
+    // person.age >= 30 && person.age <= 50  ? console.log(`${person.name} is an adult.`) : console.log(`${person.name} is Old now.`);
    })
+
+   /*+++++++++++++++++++++++++++ filter() method ++++++++++++++++++++++++++++++ */
+//filter method is used creating or mnipulating an arrya based on a certain conditions. you can do the same with foreach loop, but .filter() method is shorter way to do it..
+
+//10 examples to practice...
+
+//1.Filter even numbers
+const numbers = [1, 2, 3, 4, 5, 6];
+const evensNums = numbers.filter( (num) => (num % 2 === 0))
+// console.log(evensNums);
+
+//2.Filter odd numbers
+const numbersA = [10, 15, 20, 25, 30];
+const oddNums = numbersA.filter( (num) => {return num % 2 !== 0} )
+// console.log(oddNums);
+
+//3.Filter numbers greater than 50
+const marks = [23, 67, 89, 45, 12, 99];
+const greater = marks.filter( (num) => {return num > 50} )
+// console.log(greater)
+
+//4.Filter strings with length > 5
+const words = ["apple", "banana", "grape", "pineapple", "kiwi"];
+const moreLength = words.filter( (item) => {return item.length > 5} )
+// console.log(moreLength);
+
+//5.Filter names starting with 'A'
+const names = ["Amit", "Siddharth", "Anjali", "Rahul", "Arjun"];
+const includesA = names.filter( (items) => {return items.startsWith("A")} )
+// console.log(includesA);
+
+//6.Filter numbers that are prime
+const numbersB = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+const primes = numbersB.filter( (n) => {
+    if (n <= 1) {
+        return false;
+    }
+    else{
+        for (let i = 2; i < n; i++) {
+         if (n % i === 0)
+            return false;
+        }
+        return n > 1;
+    }
+} )
+// console.log(primes);
+
+//7.Filter objects based on property
+const students = [
+  { name: "Ravi", score: 85 },
+  { name: "Priya", score: 45 },
+  { name: "Aman", score: 72 },
+  { name: "Neha", score: 30 }
+];
+
+const pass = students.filter((studs) => (
+studs.score >= 50
+))
+// console.log(pass);
+
+//8.Filter negative numbers
+const values = [10, -4, 32, -9, 0, 27];
+const nigetives = values.filter( (val) => {
+return val < 0
+} )
+// console.log(nigetives);
+
+//9.Filter words containing a specific letter
+
+const fruitsB = ["apple", "orange", "mango", "kiwi", "grapes"];
+const includesO = fruitsB.filter( (fruit) => (fruit.includes("o")));
+console.log(includesO);
+
+//10.Filter unique values from an array
+const items = [1, 2, 2, 3, 4, 4, 5];
+const uniqueVals = items.filter( (item, index, arr) => (
+arr.indexOf(item) === index
+))
+console.log(uniqueVals);
