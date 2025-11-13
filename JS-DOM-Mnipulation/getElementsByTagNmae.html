@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementsByTagNmae method</title>
+</head>
+<body>
+    <h1>GetElementsByTagNmae method</h1>
+    <ul>
+        <li>Tea</li>
+        <li>Coffie</li>
+    </ul>
+    <p>Clikc on "Click" to change the text of the first list item</p>
+    <button onclick="myfunction()">Click</button>
+    <script>
+        function myfunction() {
+            const list = document.getElementsByTagName("ul")[0];
+            list.getElementsByTagName("li")[0].innerText = "Milk";
+        }
+    </script>
+</body>
+</html>

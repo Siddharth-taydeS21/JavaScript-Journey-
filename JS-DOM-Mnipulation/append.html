@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element.append method</title>
+</head>
+<body>
+    <h1>the Elemente.append() method -</h1>
+    <div class="div"></div>
+    <p>Click to append the txet with div element</p>
+    <button onclick="myfunction()">Append</button>
+    <br>
+    <h1>the element.prepend() method -</h1>
+    <p>Click to prepend the txet with div element</p>
+    <button onclick="newfunction()">prepend</button>
+    <br> 
+    <h1>the element.remove() method -</h1>
+    <p>Click to remove the heading given above :</p>
+    <button onclick="remove()">Remove</button>
+    <script>
+      function myfunction () {
+        const div = document.querySelector(".div");
+        div.append("Hello ! i am the appended text.")
+      }
+
+      function newfunction () {
+        const div = document.querySelector(".div");
+        div.prepend("hello i am the speak english !")
+      }
+      //major diffrence in both methods is appnend method is joins the created node to the element. and the prepend method is adds the node at the begginng of the element. that's it.
+
+      function remove() {
+        const heading = document.getElementsByTagName("h1")[2];
+        heading.remove();
+      }
+    </script>
+</body>
+</html>

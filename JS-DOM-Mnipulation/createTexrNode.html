@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create text node method-</title>
+</head>
+<body>
+   <h1>heading and text created with document.crate methods -</h1>
+    <script>
+        //ex. 1 -
+        let heading = document.createElement("h2");
+        let text = document.createTextNode("hello i am the newly created text node!");
+        heading.appendChild(text);
+        document.body.appendChild(heading)
+
+        //ex. 2 - 
+        const para =  document.createElement("p");
+        const textNode = document.createTextNode("hey am the paragraph with created textNode!")
+        para.appendChild(textNode);
+        document.body.appendChild(para);
+        para.style.color = "red";
+    </script>
+</body>
+</html>

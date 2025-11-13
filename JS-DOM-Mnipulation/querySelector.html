@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector Method</title>
+</head>
+<body>
+    <h1>QuerySelector Method</h1>
+    <p>It selects the first elemnt or child from a HTML Collection or nodeList</p>
+    <ul class="list">
+        <li>the First</li>
+        <li>the Second</li>
+        <li>the Third</li>
+    </ul>
+    <script>
+        const list = document.querySelector(".list");
+
+        list.querySelector("li").style.backgroundColor = "red";
+    </script>
+</body>
+</html>

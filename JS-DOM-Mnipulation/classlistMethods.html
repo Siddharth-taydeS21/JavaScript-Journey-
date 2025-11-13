@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList Add method</title>
+    <style>
+        .bodyStyle {
+            background-color: rgb(51, 51, 51);
+            color: white;
+        }
+
+        .myStyle {
+            padding: 50px;
+            background-color: burlywood;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: orangered;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ClassList.add() method - </h1>
+    <p>Click to add styles to the Div element</p>
+    <button onclick="addFunction()">Add styles</button>
+
+    <div id="myDiv">
+        <p>hey i am a div !</p>
+    </div>
+    <br>
+    <h1>ClassList.remove() method -</h1>
+    <p>Click to add styles to the Div element</p>
+    <button onclick="removeFunction()">Remove styles</button>
+    <br>
+    <br>
+    <h1>ClassList.toggle() method -</h1>
+    <p>Click to toggle Dark Mode...</p>
+    <button onclick="DarkMode()">Toggle</button>
+    <script>
+        function addFunction() {
+            document.querySelector("#myDiv").classList.add("myStyle")
+        }
+
+        removeFunction = () => (
+            document.querySelector("#myDiv").classList.remove("myStyle")
+        )
+
+        DarkMode = () => (
+            document.body.classList.toggle("bodyStyle")
+        )
+
+        /** We have other simller mthods like
+        classList.contains() - checks if the elemnt has the desired class and return true or false.
+        className() - ads class name directly. similler to classList.add()  **/
+    </script>
+</body>
+
+</html>

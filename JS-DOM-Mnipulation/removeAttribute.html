@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove attribute method</title>
+    <style>
+        .demo {
+            text-align: center;
+            background-color: dodgerblue;
+            padding: 10px;
+            color: white;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>the removeAttribute() method</h1>
+    <h2 id="demo" class="demo">The well styled heading</h2>
+    <p>click to remove styles from the heading.</p>
+    <button onclick="myfunction()">Click</button>
+
+    <script>
+        function myfunction(){
+            const heading = document.querySelector("#demo");
+            heading.removeAttribute("class");
+        }
+    </script>
+</body>
+</html>

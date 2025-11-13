@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementByClassName Method</title>
+</head>
+<body>
+    <h2>GetElementByClassName Method</h2>
+    <h3 class="example"></h3>
+    <h3 class="example"></h3>
+    <h3 class="example"></h3>
+    <script>
+        let collection = document.getElementsByClassName("example");
+
+        collection[0].innerHTML = "Hellow world !";
+        collection[0].style.color = "green"
+
+        collection[1].innerHTML = "I am the text with red color.";
+        collection[1].style.color = "red"
+
+        collection[2].innerHTML = "i am the text with color blue"
+        collection[2].style.color = "blue"
+    </script>
+</body>
+</html>

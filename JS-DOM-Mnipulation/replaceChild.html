@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Child Method</title>
+</head>
+<body>
+   <div>
+    <span id="childspan">foo bar</span>
+   </div>
+
+   <script>
+    //new span element created
+    const sp1 = document.createElement("span");
+
+    //text content created for span element 
+    const sp1content = document.createTextNode("I am the new replacement span element");
+
+    //text appened to span element 
+    sp1.appendChild(sp1content);
+
+    //parrent element selected 
+    const sp2 = document.querySelector("#childspan");
+    const parrent = sp2.parentElement;
+
+    //replaced created span with older span element
+    parrent.replaceChild(sp1, sp2)
+   </script>
+</body>
+</html>

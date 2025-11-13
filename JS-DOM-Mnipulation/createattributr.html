@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateAttributr and SetAttribute method -</title>
+    <style>
+        .demoClass {
+            background-color: orange;
+            color: green;
+        }
+
+        .newClass {
+            background-color: dodgerblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">the CreateAttributr & setAttributeNode Method...</h1>
+    <p>Click to change the color of the heading.</p>
+    <button onclick="myfunction()">Click</button>
+
+    <!-- second exapmle -->
+    <h2>second exapmle -</h2>
+    <h1 id="newHeading">The SetAttribute Method</h1>
+    <p>Click to change the color of the second heading.</p>
+    <button onclick="myNewFunction()">Click</button>
+    <script>
+        //logic for first heading 
+        function myfunction() {
+            const att = document.createAttribute("class");
+            att.value = "demoClass";
+            const heading = document.querySelector("#heading");
+            heading.setAttributeNode(att)
+        }
+
+        //logic for seacond heading 
+        function myNewFunction() {
+            const newHeading = document.querySelector("#newHeading");
+            newHeading.setAttribute("class", "newClass")
+        }
+    </script>
+</body>
+
+</html>
