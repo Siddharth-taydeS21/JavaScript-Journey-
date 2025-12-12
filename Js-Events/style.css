@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 20px;
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+}
+
+.main {
+    height: auto;
+    width: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.main #pic {
+    height: 140px ;
+    width: 140px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.main #pic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.main p {
+    margin-top: 15px;
+}

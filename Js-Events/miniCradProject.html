@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Card Project</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h2>Mini Project : Crad using forms and inputs -</h2> <br>
+    <h3>fill your info to get a card of from your info. </h3>
+    <form action="">
+        <input type="text" placeholder="profile pic">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="job titile">
+        <input type="text" placeholder="your info">
+        <input type="submit">
+    </form>
+
+    <div id="main">
+        <div id="pic">
+            <img src="">
+        </div>
+        <p id="name"></p>
+        <p id="email"></p>
+        <p id="jt"></p>
+        <p id="info"></p>
+    </div>
+
+    <script>
+        inputs = document.querySelectorAll("input");
+
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let main = document.querySelector("#main");
+        main.classList.add("main");
+        document.querySelector("img").src = inputs[0].value; 
+        document.querySelector("#name").textContent = `Name: ${inputs[1].value}`
+        document.querySelector("#email").textContent = `Email: ${inputs[2].value}`
+        document.querySelector("#jt").textContent = `Job Title: ${inputs[3].value}`
+        document.querySelector("#info").textContent = `About: ${inputs[4].value}`
+
+        inputs.forEach(elem => {
+            if(elem.type !== "submit")
+            elem.value = ""
+        });
+        })
+
+    </script>
+</body>
+
+</html>

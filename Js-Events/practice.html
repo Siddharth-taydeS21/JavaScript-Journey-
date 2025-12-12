@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS. Events Practice</title>
+
+  <style>
+    .Click {
+      padding: 10px;
+      background-color: rgb(209, 147, 31);
+      color: rgb(230, 70, 70);
+    }
+
+    hr{
+      border: 1px solid black;
+    }
+
+    #selected {
+      text-transform: capitalize;
+    }
+
+    .abcd {
+      height: 150px;
+      width: 150px;
+      background-color: red;
+      border-radius: 2.5%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- click event example -->
+  <h1>Some Most Commonly Used Events :</h1>
+  <h2 id="for-Cl">1. Click event :</h2>
+  <p>Click to add styles to the heading :</p>
+  <button id="click">Click</button>
+
+  <hr>
+
+  <!-- input event example -->
+  <h2>2. Input event :</h2>
+  <h3>when someone types in an input field the letter user types should print on screen:</h3>
+  <input type="text" placeholder="Name">
+  <h3 id="typed"></h3>
+
+  <hr>
+
+  <h2>3. Change event :</h2>
+  <h3>the device you choose, the heading should change with the device name :</h3>
+  <select>
+    <option selected disabled>choose your device</option>
+    <option value="apple">Iphone 17</option>
+    <option value="samsung">Gallaxy S27 ultra</option>
+    <option value="oneplus">Oneplus 10R</option>
+    <option value="iqoo">IQOO Neo 10</option>
+  </select>
+
+  <h3 id="selected"></h3>
+  <hr>
+
+  <h2>4. MouseOver event :</h2>
+  <h3>drag the mouse on the red box to see the color change :</h3>
+  <div class="abcd"></div>
+
+  <hr>
+  <br>
+  <h3>Tasks for next day :</h3>
+  <h3>1. make a charector Counter with limit of 20 Chars. (chars. should become red after the limit)</h3>
+  <h3>2. make this all again you made on this HTML file.</h3>
+  <script>
+    //  logic for click event example 
+    let heading = document.querySelector("#for-Cl");
+    let btn = document.querySelector("#click");
+
+    btn.addEventListener("click", function (e) {
+      heading.classList.toggle("Click")
+    })
+
+    // logic for input event example
+    let inp = document.querySelector("input");
+    let h3 = document.querySelector("#typed");
+    
+    inp.addEventListener("input", function (e) {
+      h3.textContent = e.data;
+      // console.log(e.data);
+    })
+
+    //logic for change example : 
+   let selct = document.querySelector("select");
+   let selected = document.querySelector("#selected");
+
+   selct.addEventListener("change", function(e) {
+    selected.textContent = `${e.target.value} device selected.`
+   })
+
+   //logic for mouseOver example :
+   let box =  document.querySelector(".abcd");
+   box.addEventListener("mouseover", function(e) {
+    box.style.backgroundColor = "yellow";
+   })
+
+   box.addEventListener("mouseout", function(e) {
+    box.style.backgroundColor = "red";
+   })
+
+  </script>
+
+</body>
+
+</html>
