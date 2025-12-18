@@ -19,14 +19,18 @@ submit.addEventListener("click", function (e) {
 
 function validateguess(guess) {
     if (isNaN(guess)) {
-        alertMsg.textContent = "alert NaN";
+        alertMsg.textContent = "Please Enetr a Valid Nnumber";
+        alertMsg.style.color =  "#ab0b0b";
     } else if (guess === '') {
-        alertMsg.textContent = "alert empty";
+        alertMsg.textContent = "Please Enetr a Valid Nnumber";
+        alertMsg.style.color =  "#ab0b0b";
     }
     else if (guess < 1) {
-        alertMsg.textContent = "alert less";
+        alertMsg.textContent = "Please enter a number greater that 1";
+        alertMsg.style.color =  "#ab0b0b";
     } else if (guess > 100) {
-        alertMsg.textContent = "alert greater";
+        alertMsg.textContent = "Please enter a number smaller that 100";
+        alertMsg.style.color =  "#ab0b0b";
     } else {
         checkGuess(guess);
         if (guesss === 1) {
@@ -42,11 +46,14 @@ function validateguess(guess) {
 
 function checkGuess(guess) {
     if (guess < randomnumber) {
-        alertMsg.textContent = "guess less";
+        alertMsg.textContent = "Guess is small than the Random Number Try Again!";
+        alertMsg.style.color =  "black";
     } else if (guess > randomnumber) {
-        alertMsg.textContent = "guess greater";
+        alertMsg.textContent = "Guess is big than the Random Number Try Again!";
+        alertMsg.style.color =  "black";
     } else if (guess === randomnumber) {
-        alertMsg.textContent = "guess equal you won!!";
+        alertMsg.innerHTML = "<p>Guess is Equals to the Random Number <br> Congrats You Won!</p>";
+        alertMsg.style.color =  "green";
     }
     guess = "";
 }
