@@ -101,7 +101,9 @@ fetch('https://exampleurl.com')
 .then( (response) => {
 return response.json();
 })
-.then(data)
+.then((data) => {
+    console.log(data); 
+})
 .catch( (error)=> console.log(error)
 );
 
