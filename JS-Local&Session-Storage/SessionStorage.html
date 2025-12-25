@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ++++++++++++++ Session Storage ++++++++++++++ //
+    /*
+    Session Storage is prity simillar to the localstorage. all methods to manupulate the data is same.
+    But the major diffrenece is Session storage Onaly survives a Page refresh, and it cant survive the Closing and opening the tab.
+    Data can be automatically cleared when the page session ends.(close opening tab. brooser closed.)  
+
+    Methods for he session storage ->
+    //1 sessionStorage.setItem(key, value) - to store a value in Local Storage
+    //2 sessionStorage.getItem(key) - to get value from local sorage by key
+    //3 sessionStorage.removeItem(key) - to remove Data from Local Storage
+    //4 sessionStorage.clear() - to remove All (Clear Local Storage)
+    //5 sessionStorage.key(i) - get the key at the index number
+
+    */
+    //The storage event - 
+    // The storage event is occers when we update the local or session storage =>
+   
+        window.addEventListener("storage", (e)=>{
+            console.log('storge changed!');
+            console.log(e);
+        })
+        localStorage.clear()
+</script>
+</html>

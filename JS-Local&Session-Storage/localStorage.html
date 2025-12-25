@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #313131;">
+
+</body>
+<script>
+    // ++++++++++++++ Local Storage ++++++++++++++ //
+
+    //local storage is storage object given by the browser.
+    //we can save data in local storge in key-value pires.
+    //the data we save in local storage can survive a full page refresh or browser restart.
+
+    // we have some built-in methods with Local storage
+
+    //1 .setItem(key, value) - to store a value in Local Storage
+    //2 ..getItem(key) - to get value from local sorage by key
+    //3 .removeItem(key) - to remove Data from Local Storage
+    //4 ..clear() - to remove All (Clear Local Storage)
+    //5 .key(i) - get the key at the index number
+
+
+    //Code Example - 
+    let key = prompt("enter the key you want to set");
+    let value = prompt("enter the value you want to set");
+
+    //  .setItem() example-
+    localStorage.setItem(key, value)
+    // Note - you can update value of a key using .setItem() by reasigning the key and new value Like this ->
+    // localStorage.setItem(Old Key, value you want to update)  
+
+    //  .getItem() example-
+    console.log(`the value at ${key} is ${localStorage.getItem(key)}`)
+</script>
+
+</html>
