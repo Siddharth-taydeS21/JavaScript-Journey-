@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    //1. What is cockies?
+    //-> Cokckies are small strings to store data inside the browsers.
+    //example - 
+    // "cockieName=cockieValue11002345"
+
+    //how to accsess cockies of a page ->
+    //  console.log(document.cookie);
+
+    //how to set a cockie ->
+    // document.cookie = "siddharth=sidd12344564633"
+    // document.cookie = "prany=pranyNamedUser23"
+    // document.cookie = "prashik=peashikNmaeduser767435"
+    // document.cookie = "sakshi=sakshiNamedUser0035354"
+    // console.log(document.cookie);
+
+
+    //Notes -
+    //document.cookie method is not going to overrite the existing cockies on the web paje
+    //inted its add the cockies in existing cockies.
+
+
+    //How to override a cockie? 
+    //-> this example is going to override =
+    // document.cookie = "Cockie1=blablablafoo0000";
+    // // console.log(document.cookie);
+
+    // document.cookie = "Cockie1=overridedValue0011";
+    // // console.log(document.cookie);
+
+    // //encodeURIComponent() and decodeURIComponent() methods -
+    // let example = document.cookie = "2;;=546$#$%$^" //this will gave an error cookies can't set semicolens and special charecters as key value paires. for that we have encodeURI() and decodeURI() methods.
+
+    //example =>
+    let key = "23;;";
+    let value = "siddharth$%#";
+    document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+    console.log(document.cookie);
+    //output => "23%3B%3B=siddharth%24%25%23"
+    //with encodeURIComponent() mthod we can set semicolens and special charecters as key value paires.
+
+    // to decode this we have the decodeURIComponent() method ->
+    console.log(decodeURIComponent("23%3B%3B=siddharth%24%25%23"));
+    //output => 23;;=siddharth$%# (as asme as we set in the key and value.)
+</script>
+</html>
