@@ -32,3 +32,18 @@ let printNmae = function () {
 
 let CallLeter = printNmae.bind(userDetails3);
 CallLeter()
+
+/*
++++++++++++++++++++++++ Imporatant insights about the this keyword +++++++++++++++++++++++++
+what valuse dose the .this keyword holds in different sinarios?
+
+this keyword positions                         Values it Contains                    
+    gobal -                                      window
+    function -                                   window
+    object>function(es5) -                       Current object
+    object>function(arrow) -                     window
+    object>function(es5)>function(es5) -         window
+    object>function(es5)>function(arrow) -       Current object
+    eventlistener>this -                         Current element
+    Class constructor -                          object with the vars of the current clacc
+*/
