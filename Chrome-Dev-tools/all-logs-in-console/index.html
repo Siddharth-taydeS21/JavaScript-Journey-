@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different logs in Console</title>
+</head>
+
+<body>
+    <button onclick="helloFunction()">Log Info</button>
+    <button onclick="warnFunction()">Log Warning</button>
+    <button onclick="errorFunction()">Log Error</button>
+    <button onclick="tableFunction()">Log Table</button>
+    <button onclick="groupFunction()">Log Group</button>
+    <button onclick="customFunction()">Log Custom</button>
+    <script>
+        const exmArr = [
+            {
+                name: 'siddharth',
+                age: 21
+            },
+            {
+                name: 'Raja',
+                age: 22
+            },
+            {
+                name: 'Rani',
+                age: 23
+            }
+        ]
+        const helloFunction = () => {
+            console.log('Hello ' + myname +'!')
+            let myname = 'sid';
+        }
+
+        // throw new Error('some error happened')
+
+        const warnFunction = () => {
+            console.warn("Hey there it's a warning")
+        }
+
+        const errorFunction = () => {
+            console.error("I am sorry i need to throw an error");
+        }
+
+        const tableFunction = () => {
+            console.table(exmArr)
+        }
+
+        const groupFunction = () => {
+            const label = "the group is created by siddharth";
+            console.group(label);
+            console.info('lio')
+            console.info('mike')
+            console.info('don')
+            console.info('ria')
+            console.groupEnd(label);
+        }
+
+        const customFunction = () => {
+            const styles = `
+            padding: 10px;
+            background-color: green;
+            font-size: 20px;
+            border: 2px solid red;
+            `;
+            console.log('%cthis is a custom log with styles', styles);
+        }
+    </script>
+</body>
+
+</html>
